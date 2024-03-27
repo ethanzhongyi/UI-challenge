@@ -1,0 +1,263 @@
+<html>
+	<style type="text/css">
+		.warpper {
+			transition: all .2s;
+			width: 30%;
+			height: 70%;
+			padding: 10px;
+			margin: 10px;
+			background: var(--theme-background);
+			border: solid grey;
+			border-radius: 10px;
+		}
+
+		.header {
+			display: flex;
+			height: 50px;
+			justify-content: space-between;
+		}
+
+		.header__dec {
+			color: var(--text-color);
+		}
+
+		.content {
+			display: flex;
+			justify-content: space-between;
+			margin: 20px 0;
+		}
+		.content__box {
+			width: 47%;
+		}
+		.content__arrow {
+			height: 45px;
+			display: flex;
+			align-items: end;
+			justify-content: center;
+		}
+		.box {
+			height: 30px;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			border: solid grey;
+			border-radius: 10px;
+			background: var(--box-background);
+		}
+		.content__arrow {width: 20px;}
+
+		.amount {
+			height: 100px;
+			padding: 20px 0;
+		}
+
+		.amount__left {
+			flex: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 50px;
+			border: solid grey;
+			border-right: none;
+			border-radius: 10px 0 0 10px;
+		}
+
+		.amount__input {
+			flex: 4;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			height: 50px;
+			border: solid grey;
+			border-radius: 0 10px 10px 0;
+			padding: 0 10px;
+		}
+
+		.tag {
+			width: 35px;
+			height: 20px;
+			line-height: 20px;
+			border-radius: 5px;
+			color: var(--tag-text);
+			background: var(--tag-color);
+			margin-left: 5px;
+			text-align: center;
+		}
+
+		.amount__tag {
+			display: flex;
+			flex-direction: row-reverse;
+			padding: 10px 0;
+		}
+
+		.time {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			border-radius: 5px;
+			background: var(--box-background);
+			margin: 10px 0;
+			font-size: 15px;
+			color: var(--time-color);
+		}
+		.time--icon {
+			padding: 0 10px;
+		}
+
+		.transfer {
+			width: 100%;
+			height: 50px;
+			line-height: 50px;
+			border-radius: 5px;
+			color: var(--btn-text);
+			background: var(--btn-color);
+			text-align: center;
+			margin: 10px 0;
+		}
+
+		.cancel {
+			width: 100%;
+			height: 20px;
+			line-height: 20px;
+			text-align: center;
+			color: var(--tag-text);
+		}
+
+		.showflex {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.text {
+			font-size: 15px;
+			color: var(--text-sub-color);
+		}
+
+		.dark {
+		  --text-color: white;
+		  --text-sub-color: rgb(85,97,111);
+		  --theme-background: rgb(32,36,40);
+		  --box-background: rgb(20,20,23);
+		  --time-color: white;
+		  --btn-text: black;
+		  --btn-color: white;
+		  --tag-color: rgb(43,49,55);
+		  --tag-text: rgb(93,107,120);
+		}
+
+		.day {
+		  --text-color: black;
+		  --text-sub-color: #7a7575;
+		  --theme-background: white;
+		  --box-background: rgb(237,242,250);
+		  --time-color: #7a7575;
+		  --btn-text: white;
+		  --btn-color: rgb(43,49,55);
+		  --tag-color: rgb(237,242,250);
+		  --tag-text: rgb(128,140,154);
+		}
+
+		.change {
+			display: inline-block;
+			width: 55px;
+			height: 30px;
+			line-height: 30px;
+			border-radius: 5px;
+			background: rgb(237,242,250);
+			margin-left: 5px;
+			text-align: center;
+		}
+	</style>
+
+	<body>
+		<div class="warpper">
+			<div class="header">
+				<div class="header__dec">Deposit ATOM</div>
+				<div class="header__close">
+					<svg t="1711450780634" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4249" width="24" height="24"><path d="M285.76 344.576a41.6 41.6 0 0 1 58.88-58.88l167.36 167.488 167.424-167.488a41.6 41.6 0 0 1 58.88 58.88L570.816 512l167.488 167.424a41.6 41.6 0 0 1-58.88 58.88L512 570.816l-167.424 167.488a41.6 41.6 0 0 1-58.88-58.88L453.248 512 285.696 344.576z" fill="#5A5A5A" p-id="4250"></path></svg>
+				</div>
+			</div>
+
+			<div class="warpper__content">
+				<div class="content">
+					<div class="content__box">
+						<div class="text">From Cosmos Hub</div>
+						<div class="box">
+							<svg t="1711454488408" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1364" width="18" height="18"><path d="M0 0h1024v1024H0z" fill="#FFFFFF" p-id="1365"></path><path d="M85.333333 85.333333h853.333334v853.333334H85.333333z" fill="#FFFFFF" p-id="1366"></path><path d="M512 53.333333c253.312 0 458.666667 205.354667 458.666667 458.666667S765.312 970.666667 512 970.666667 53.333333 765.312 53.333333 512 258.688 53.333333 512 53.333333z m0 170.666667c-159.061333 0-288 128.938667-288 288S352.938667 800 512 800 800 671.061333 800 512 671.061333 224 512 224z" fill="#111111" p-id="1367"></path><path d="M601.642667 603.370667l84.928 49.002666a223.765333 223.765333 0 0 1-142.570667 81.365334V635.946667a127.829333 127.829333 0 0 0 57.642667-32.597334z m-121.664 32.597333v97.770667a223.786667 223.786667 0 0 1-143.146667-82.090667l84.821333-48.96a127.850667 127.850667 0 0 0 58.325334 33.28zM512 426.666667a85.333333 85.333333 0 1 1 0 170.666666 85.333333 85.333333 0 0 1 0-170.666666z m224 85.333333c0 30.208-5.973333 59.008-16.810667 85.290667l-84.48-48.768A128.021333 128.021333 0 0 0 640 512c0-11.392-1.493333-22.442667-4.266667-32.96l84.821334-48.938667c9.962667 25.365333 15.445333 52.992 15.445333 81.898667z m-432.896-81.024l84.928 49.024a128.213333 128.213333 0 0 0 0.981333 67.584l-84.565333 48.853333A223.36 223.36 0 0 1 288 512c0-28.586667 5.333333-55.893333 15.104-81.024z m176.853333-140.714667l0.021334 97.770667a127.914667 127.914667 0 0 0-60.949334 35.968l-84.48-48.746667a223.829333 223.829333 0 0 1 145.429334-84.992z m208.874667 84.224l-84.544 48.810667A127.893333 127.893333 0 0 0 544 388.053333v-97.770666a223.808 223.808 0 0 1 144.810667 84.224z" fill="#111111" p-id="1368"></path></svg>
+							<span class="text">atom1xy5y...6wwz9a</span>
+						</div>
+					</div>
+					
+					<div class="content__arrow">
+						<span>→</span>
+					</div>
+					
+					<div class="content__box">
+						<div class="text">To Osmosls</div>
+						<div class="box">
+							<svg t="1711454488408" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1364" width="18" height="18"><path d="M0 0h1024v1024H0z" fill="#FFFFFF" p-id="1365"></path><path d="M85.333333 85.333333h853.333334v853.333334H85.333333z" fill="#FFFFFF" p-id="1366"></path><path d="M512 53.333333c253.312 0 458.666667 205.354667 458.666667 458.666667S765.312 970.666667 512 970.666667 53.333333 765.312 53.333333 512 258.688 53.333333 512 53.333333z m0 170.666667c-159.061333 0-288 128.938667-288 288S352.938667 800 512 800 800 671.061333 800 512 671.061333 224 512 224z" fill="#111111" p-id="1367"></path><path d="M601.642667 603.370667l84.928 49.002666a223.765333 223.765333 0 0 1-142.570667 81.365334V635.946667a127.829333 127.829333 0 0 0 57.642667-32.597334z m-121.664 32.597333v97.770667a223.786667 223.786667 0 0 1-143.146667-82.090667l84.821333-48.96a127.850667 127.850667 0 0 0 58.325334 33.28zM512 426.666667a85.333333 85.333333 0 1 1 0 170.666666 85.333333 85.333333 0 0 1 0-170.666666z m224 85.333333c0 30.208-5.973333 59.008-16.810667 85.290667l-84.48-48.768A128.021333 128.021333 0 0 0 640 512c0-11.392-1.493333-22.442667-4.266667-32.96l84.821334-48.938667c9.962667 25.365333 15.445333 52.992 15.445333 81.898667z m-432.896-81.024l84.928 49.024a128.213333 128.213333 0 0 0 0.981333 67.584l-84.565333 48.853333A223.36 223.36 0 0 1 288 512c0-28.586667 5.333333-55.893333 15.104-81.024z m176.853333-140.714667l0.021334 97.770667a127.914667 127.914667 0 0 0-60.949334 35.968l-84.48-48.746667a223.829333 223.829333 0 0 1 145.429334-84.992z m208.874667 84.224l-84.544 48.810667A127.893333 127.893333 0 0 0 544 388.053333v-97.770666a223.808 223.808 0 0 1 144.810667 84.224z" fill="#111111" p-id="1368"></path></svg>
+							<span class="text">osmo1xy5y...w9a</span>
+							<svg t="1711450868436" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8158" width="14" height="14"><path d="M618.666667 192l213.333333 213.333333 89.002667-89.002666a85.333333 85.333333 0 0 0 0-120.661334l-92.672-92.672a85.333333 85.333333 0 0 0-120.661334 0L618.666667 192zM95.872 901.76l71.765333-251.136a42.666667 42.666667 0 0 1 10.837334-18.432L554.666667 256l213.333333 213.333333-376.192 376.192a42.666667 42.666667 0 0 1-18.432 10.837334l-251.136 71.765333a21.333333 21.333333 0 0 1-26.368-26.368z" fill="#8a8a8a" p-id="8159"></path></svg>
+						</div>
+					</div>
+				</div>
+
+				<div class="amount">
+					<div class="showflex">
+						<div class="text">Select amount</div>
+						<div class="text">Available 2 ATOM</div>
+					</div>
+					<div class="showflex">
+						<div class="amount__left">
+							<svg t="1711454488408" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1364" width="24" height="24"><path d="M0 0h1024v1024H0z" fill="#FFFFFF" p-id="1365"></path><path d="M85.333333 85.333333h853.333334v853.333334H85.333333z" fill="#FFFFFF" p-id="1366"></path><path d="M512 53.333333c253.312 0 458.666667 205.354667 458.666667 458.666667S765.312 970.666667 512 970.666667 53.333333 765.312 53.333333 512 258.688 53.333333 512 53.333333z m0 170.666667c-159.061333 0-288 128.938667-288 288S352.938667 800 512 800 800 671.061333 800 512 671.061333 224 512 224z" fill="#111111" p-id="1367"></path><path d="M601.642667 603.370667l84.928 49.002666a223.765333 223.765333 0 0 1-142.570667 81.365334V635.946667a127.829333 127.829333 0 0 0 57.642667-32.597334z m-121.664 32.597333v97.770667a223.786667 223.786667 0 0 1-143.146667-82.090667l84.821333-48.96a127.850667 127.850667 0 0 0 58.325334 33.28zM512 426.666667a85.333333 85.333333 0 1 1 0 170.666666 85.333333 85.333333 0 0 1 0-170.666666z m224 85.333333c0 30.208-5.973333 59.008-16.810667 85.290667l-84.48-48.768A128.021333 128.021333 0 0 0 640 512c0-11.392-1.493333-22.442667-4.266667-32.96l84.821334-48.938667c9.962667 25.365333 15.445333 52.992 15.445333 81.898667z m-432.896-81.024l84.928 49.024a128.213333 128.213333 0 0 0 0.981333 67.584l-84.565333 48.853333A223.36 223.36 0 0 1 288 512c0-28.586667 5.333333-55.893333 15.104-81.024z m176.853333-140.714667l0.021334 97.770667a127.914667 127.914667 0 0 0-60.949334 35.968l-84.48-48.746667a223.829333 223.829333 0 0 1 145.429334-84.992z m208.874667 84.224l-84.544 48.810667A127.893333 127.893333 0 0 0 544 388.053333v-97.770666a223.808 223.808 0 0 1 144.810667 84.224z" fill="#111111" p-id="1368"></path></svg>
+						</div>
+						<div class="amount__input">
+							<div class="header__dec">2</div>
+							<div class="header__dec">ATOM ≈ $1,013</div>
+						</div>
+					</div>
+					<div class="amount__tag">
+						<div class="tag">1/3</div>
+						<div class="tag">1/2</div>
+						<div class="tag">Max</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer">
+				<div class="time">
+				  <span class="time--icon">
+					  <svg
+				        xmlns="http://www.w3.org/2000/svg"
+				        width="14"
+				        height="14"
+				        viewBox="0 0 24 24"
+				        fill="none"
+				        stroke="currentColor"
+				        stroke-width="2"
+				        stroke-linecap="round"
+				        stroke-linejoin="round"
+				        class="w-6 h-6 mr-2"
+				      >
+				        <circle cx="12" cy="12" r="10"></circle>
+				        <polyline points="12 6 12 12 16 14"></polyline>
+				      </svg>
+			      </span>
+				  Estimated time: 20 seconds
+				</div>
+				<div class="transfer">Transfer</div>
+				<div class="cancel">Cancel</div>
+			</div>
+		</div>
+
+		<span>click button change theme →</span>
+		<span class="change" onclick="setTheme('day')">Day</span>
+		<span class="change" onclick="setTheme('dark')">Dark</span>
+	</body>
+
+	<script type="text/javascript">
+		function setTheme(theme) {
+			document.body.className = theme;
+		}
+	</script>
+</html>
